@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="177.0" prefWidth="255.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Kanban.TaskController">
+   <top>
+      <AnchorPane prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="taskName" layoutX="22.0" layoutY="6.0" text="Task Card" />
+            <MenuButton layoutX="197.0" layoutY="2.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="44.0" text="+">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Duplicate" />
+                  <MenuItem mnemonicParsing="false" text="Remove Task" />
+                <MenuItem mnemonicParsing="false" text="Move Task Right" />
+                  <MenuItem mnemonicParsing="false" text="Move Task Left" />
+                  <MenuItem fx:id="changeNameButton" mnemonicParsing="false" onAction="#changeTaskName" text="Change Task Name" />
+                  <MenuItem mnemonicParsing="false" onAction="#changeTaskText" text="Change Task Description" />
+              </items>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <Text fx:id="taskText" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Text" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
